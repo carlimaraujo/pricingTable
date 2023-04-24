@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 38.4rem;
+
+  border: 0.1rem solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 4.8rem 3.2rem 3.2rem 3.2rem;
+}
+
+.card:hover {
+  border: 0.1rem solid #996dff;
+}
+
+.card:nth-child(2) {
+  background-color: #0f172a;
+}
+
+.card:nth-child(2) > span {
+  position: absolute;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.06em;
+  color: #0f172a;
+
+  background: #fba94c;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.6rem;
+
+  align-self: center;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.card:nth-child(2) .type span,
+.card:nth-child(2) .type .price span {
+  color: #f8fafc;
+}
+
+.card:nth-child(2) a {
+  background: #996dff;
+  color: #fff;
+  border: none;
+}
+
+.card:nth-child(2) a:hover {
+  background: #7c3aed;
+}
+
+.card:nth-child(2) .divider {
+  background: #334155;
+}
+.card h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.06em;
+  color: #7c3aed;
+}
+
+.card .type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0.8rem 0 3.2rem 0;
+}
+
+.card .type > span {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4.9rem;
+
+  color: #1e293b;
+}
+
+.card .type .price span {
+  color: #1e293b;
+}
+
+.card .type .price span:nth-child(1) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.card .type .price span:nth-child(2) {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.7rem;
+}
+
+.card .type .price span:nth-child(3) {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.card a {
+  text-decoration: none;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #1e293b;
+
+  border: 0.1rem solid #1e293b;
+  border-radius: 0.4rem;
+  text-align: center;
+
+  padding: 1.6rem 2.4rem;
+
+  transition: 0.2s;
+}
+
+.card a:hover {
+  background-color: #1e293b;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.card .divider {
+  height: 0.1rem;
+  background-color: #e2e8f0;
+
+  margin: 3.2rem 0;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1.6rem;
+}
+
+.info img {
+  height: 2rem;
+  width: auto;
+}
+
+.info img:last-child {
+  position: absolute;
+  right: 0;
+  align-self: center;
+}
+
+.info span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.06em;
+  color: #475569;
+
+  margin-left: 0.8rem;
+}
+
+@media (max-width: 1023px) {
+  body {
+    height: 100vh;
+  }
+
+  .cards {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    padding: 8rem 2rem;
+    gap: 2.4rem;
+  }
+
+  .card {
+    padding: 2.4rem;
+    width: 32rem;
+  }
+
+  .card .type {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card .type span {
+    font-size: 2.4rem;
+  }
+
+  .card .type .price span {
+    font-size: 1.8rem;
+  }
+
+  .card:nth-child(2) {
+    margin-top: 2.5rem;
+  }
+
+  .card h3 {
+    margin-bottom: 0.8rem;
+  }
+
+  .card .type {
+    margin-bottom: 1.6rem;
+  }
+
+  .card .divider {
+    margin: 1.6rem 0;
+  }
+
+  .card:nth-child(3) {
+    padding-bottom: 10.4rem;
+  }
+}
